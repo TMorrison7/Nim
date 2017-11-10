@@ -18,7 +18,37 @@ namespace NimTheGame
             this.isHuman = isHuman;
             this.isTurn = isTurn;
         }
-
-        public getName
+        public String getName()
+        {
+            return name;
+        }
+        public bool getIsHuman()
+        {
+            return isHuman;
+        }
+        public bool getIsTurn()
+        {
+            return isTurn;
+        }
+        public void setName(String name)
+        {
+            this.name = name;
+        }
+        public void setIsHuman(bool isHuman)
+        {
+            this.isHuman = isHuman;
+        }
+        public void setIsTurn(bool isTurn)
+        {
+            this.isTurn = isTurn;
+        }
+        public int cpuHeapSelection(int maxNum)
+        {
+            return 0;
+        }
+        public int cpuMatchSelection(int maxNum)
+        {
+            return 0;
+        }
     }
 }
