@@ -15,7 +15,7 @@ namespace NimTheGame
         {
             for(int x = 0; x < size; x++)
             {
-                values[x] = false;
+                values[x] = true;
             }
         }
 
@@ -32,9 +32,20 @@ namespace NimTheGame
             return i;
         }
 
-        public int removeMatches()
+        public void removeMatches(int num)
         {
+            for (int x = 0; x < num; x++)
+            {
+                if (values[x] == true)
+                {
+                    values[x] = false;
+                }
+            }
+        }
 
+        public override string ToString()
+        {
+            return "";
         }
 
     }
