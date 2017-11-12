@@ -36,11 +36,17 @@ namespace NimTheGame
         {
             bool matchesFound = false;
 
-            for (int i = 0; i < heaps.Count(); i++)
+            //check each heap
+            foreach(Heap heap in heaps)
             {
-                if(heaps.ElementAt(i).getMatches() != 0) { matchesFound = true; }
+                //check if this heap has any matches
+                if(heap.getMatches() > 0)
+                {
+                    //matchesFound is true if matches are found
+                    matchesFound = true;
+                }
             }
-
+            
             //if matches are found, return false if no one has won, & vice versa
             return !matchesFound;
         }
@@ -51,6 +57,7 @@ namespace NimTheGame
         /// <returns>The number of heaps on the board</returns>
         public int getHeapSize()
         {
+            //just gets the count of the Heaps in heaps
             return heaps.Count();
         }
 
@@ -61,6 +68,7 @@ namespace NimTheGame
         /// <returns>The amount of matches in the heap a player can take</returns>
         public int getMaxNumber(int heapSelection)
         {
+            //just reffers to the Heap classes method to count the matches
             return heaps[heapSelection].getMatches();
         }
 
@@ -71,7 +79,7 @@ namespace NimTheGame
         /// <param name="numToBeRemoved">The amount of matches to be removed from the heap</param>
         public void removeMatchesFrom(int heapSelection, int numToBeRemoved)
         {
-            heaps[heapSelection].removeMatches(numToBeRemoved);
+            //heaps[heapSelection].removeMatches(numToBeRemoved);
         }
     }
 }

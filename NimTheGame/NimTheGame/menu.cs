@@ -25,25 +25,31 @@ namespace NimTheGame
 
             do
             {
+                //display the options
                 for (int i = 0; i < options.Count(); i++)
                 {
                     Console.WriteLine($"{i+1}) {options[i]}");
                 }
+                //if there is a quit option it will be option 0 so the user needs to be able to select that
                 if (withQuit) { Console.WriteLine("0) Quit"); min = 0; }
 
                 Console.Write("\nSelection: ");
 
                 string userInput = Console.ReadLine();
 
+                //if the user input isn't a number, is higher than the amount of options, or is smaller than the amount of options
                 if ((!int.TryParse(userInput, out selection)) || selection > options.Count() + 1 || selection < min)
                 {
+                    //tell them and prompt them again
                     Console.WriteLine("\nPlease enter in a number that is available on the list above\n");
                     continuePrompting = true;
                 }
+                //if the input is good stop prompting for input
                 else { continuePrompting = false; }
 
             } while (continuePrompting);
 
+            //the userinput has already been parsed into an int in the if statement
             return selection;
         }
 
@@ -59,8 +65,10 @@ namespace NimTheGame
             Console.WriteLine("Please enter your name");
             string userInput = Console.ReadLine();
 
+            //if the string isn't null or empty
             if(userInput != null && userInput != string.Empty)
             {
+                //the name will change from default to the users input
                 name = userInput;
             }
 
