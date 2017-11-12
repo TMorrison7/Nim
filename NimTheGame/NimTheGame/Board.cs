@@ -45,19 +45,33 @@ namespace NimTheGame
             return !matchesFound;
         }
 
+        /// <summary>
+        /// A method that returns the number of heaps on the board
+        /// </summary>
+        /// <returns>The number of heaps on the board</returns>
         public int getHeapSize()
         {
-            return 0;
+            return heaps.Count();
         }
 
+        /// <summary>
+        /// A method that takes in an integer that represents the heap selected then returns the max amount of matches a player can take from that particular heap
+        /// </summary>
+        /// <param name="heapSelection">The heap the max number will be found from</param>
+        /// <returns>The amount of matches in the heap a player can take</returns>
         public int getMaxNumber(int heapSelection)
         {
-            return 0;
+            return heaps[heapSelection].getMatches();
         }
 
-        public void removeMatcher(int heapSelection)
+        /// <summary>
+        /// A method that removes a number of matches from a particular heap. This method takes in two integers, the heap selected and the number of matches to be removed from the heap.
+        /// </summary>
+        /// <param name="heapSelection">The heap the matches will be removed from</param>
+        /// <param name="numToBeRemoved">The amount of matches to be removed from the heap</param>
+        public void removeMatchesFrom(int heapSelection, int numToBeRemoved)
         {
-
+            heaps[heapSelection].removeMatches(numToBeRemoved);
         }
     }
 }
