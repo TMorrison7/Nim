@@ -100,7 +100,7 @@ namespace NimTheGame
         public int cpuHeapSelection(int maxNum)
         {
             Random rand = new Random();
-            int x = rand.Next(1, maxNum);
+            int x = rand.Next(1, maxNum + 1);
 
             return x;
         }
@@ -116,7 +116,7 @@ namespace NimTheGame
         public int cpuMatchSelection(int maxNum)
         {
             Random rand = new Random();
-            int x = rand.Next(1, maxNum);
+            int x = rand.Next(1, maxNum + 1);
 
             return x;
         }
