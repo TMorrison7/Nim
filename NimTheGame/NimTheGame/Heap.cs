@@ -8,9 +8,16 @@ namespace NimTheGame
 {
     public class Heap
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private int matches;
         private bool[] values;
-
+        /// <summary>
+        /// Generates a heap
+        /// </summary>
+        /// <param name="size">The size of the heap</param>
+        /// <param name="matches">The amount of matches in the heap</param>
         public Heap(int size, int matches)
         {
             for(int x = 0; x < size; x++)
@@ -18,7 +25,10 @@ namespace NimTheGame
                 values[x] = true;
             }
         }
-
+        /// <summary>
+        /// This method returns the amount of matches in the heap
+        /// </summary>
+        /// <returns> The amount of booleans in the heap that's true</returns>
         public int getMatches()
         {
             int i = 0;
@@ -31,7 +41,11 @@ namespace NimTheGame
             }
             return i;
         }
-
+        /// <summary>
+        /// This method takes in an integer, then changes that amount of booleans 
+        /// from true to false. Thus taking away the matches
+        /// </summary>
+        /// <param name="num">The number of matches within the heap</param>
         public void removeMatches(int num)
         {
             for (int x = 0; x < num; x++)
@@ -42,9 +56,13 @@ namespace NimTheGame
                 }
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
+            /* I dont know what to do here*/
             return "";
         }
 
