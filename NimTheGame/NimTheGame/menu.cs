@@ -55,12 +55,12 @@ namespace NimTheGame
 
         /// <summary>
         /// This function prompts the player for a name and returns it.
-        /// If given a empty string or null, will return default
+        /// If given a empty string or null, will return an empty string
         /// </summary>
         /// <returns>The string(name) the player inputs</returns>
         public string promptForName()
         {
-            string name = "Default";
+            string name = string.Empty;
 
             Console.WriteLine("Please enter your name");
             string userInput = Console.ReadLine();
