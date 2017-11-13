@@ -8,7 +8,9 @@ namespace NimTheGame
 {
     public class Board
     {
-        private Heap[] heaps;
+
+        //We need to document changing this to a List
+        private List<Heap> heaps;
 
         /// <summary>
         /// Adds a heap of matches to the board
@@ -17,14 +19,16 @@ namespace NimTheGame
         /// <param name="numberOfMatches">The amount of matches in the heap</param>
         public void addHeap(int size, int numberOfMatches)
         {
+            //creates a new heap using the size and # of matches
             Heap heap = new Heap(size, numberOfMatches);
-            //uh heaps[i] = heap;
+            //adds it to our list of heaps
+            heaps.Add(heap);
         }
 
-        public Board()
-        {
-            //i dont know what to do here
-        }
+        /// <summary>
+        /// The constructor for the board, this simply instantiates an empty board ready to be modified by the game
+        /// </summary>
+        public Board() { }
 
         /// <summary>
         /// This method checks if there is still a possible move to be made.
@@ -68,7 +72,7 @@ namespace NimTheGame
         /// <returns>The amount of matches in the heap a player can take</returns>
         public int getMaxNumber(int heapSelection)
         {
-            //just reffers to the Heap classes method to count the matches
+            //just referrs to the Heap classes method to count the matches
             return heaps[heapSelection].getMatches();
         }
 
