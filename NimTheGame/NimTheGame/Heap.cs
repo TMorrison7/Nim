@@ -20,9 +20,24 @@ namespace NimTheGame
         /// <param name="matches">The amount of matches in the heap</param>
         public Heap(int size, int matches)
         {
-            for(int x = 0; x < size; x++)
+            if (matches > size)
             {
-                values[x] = true;
+                Console.WriteLine("The amount of matches is greater than the size");
+            }
+            else
+            { 
+                for (int x = 0; x < size; x++)
+                {
+                    if (matches != 0)
+                    {
+                        values[x] = false;
+                        matches--;
+                    }
+                    else
+                    {
+                        values[x] = true;
+                    }
+                }
             }
         }
         /// <summary>
