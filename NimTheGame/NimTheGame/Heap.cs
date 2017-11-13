@@ -57,13 +57,24 @@ namespace NimTheGame
             }
         }
         /// <summary>
-        /// 
+        /// This method prints the values within a selected heap: True - (1) False - (0)
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The string of the heap</returns>
         public override string ToString()
         {
-            /* I dont know what to do here*/
-            return "";
+            StringBuilder sb = new StringBuilder();
+            for(int x = 0; x < values.Length; x++)
+            {
+                if (values[x] == true)
+                {
+                    sb.Append("(1)");
+                }
+                else if(values[x]==false)
+                {
+                    sb.Append("(0)");
+                }
+            }
+            return sb.ToString();
         }
 
     }

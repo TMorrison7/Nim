@@ -85,5 +85,18 @@ namespace NimTheGame
         {
             //heaps[heapSelection].removeMatches(numToBeRemoved);
         }
+        /// <summary>
+        /// This method prints out each heap in the board collectively
+        /// </summary>
+        /// <returns>The Board contain heaps</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach(Heap heap in heaps)
+            {
+                sb.Append(heap.ToString() + "\n");
+            }
+            return sb.ToString();
+        }
     }
 }
