@@ -10,7 +10,7 @@ namespace NimTheGame
     {
 
         //We need to document changing this to a List
-        private List<Heap> heaps;
+        private List<Heap> heaps = new List<Heap>();
 
         /// <summary>
         /// Adds a heap of matches to the board
@@ -28,7 +28,7 @@ namespace NimTheGame
         /// <summary>
         /// The constructor for the board, this simply instantiates an empty board ready to be modified by the game
         /// </summary>
-        public Board() { }
+        public Board() { heaps.Clear(); }
 
         /// <summary>
         /// This method checks if there is still a possible move to be made.
@@ -83,7 +83,7 @@ namespace NimTheGame
         /// <param name="numToBeRemoved">The amount of matches to be removed from the heap</param>
         public void removeMatchesFrom(int heapSelection, int numToBeRemoved)
         {
-            //heaps[heapSelection].removeMatches(numToBeRemoved);
+            heaps[heapSelection].removeMatches(numToBeRemoved);
         }
         /// <summary>
         /// This method prints out each heap in the board collectively

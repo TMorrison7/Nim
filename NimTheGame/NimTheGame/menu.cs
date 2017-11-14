@@ -19,7 +19,7 @@ namespace NimTheGame
         /// <returns>the integer the user entered</returns>
         public int promptForInt(string[] options, bool withQuit)
         {
-            bool continuePrompting = false;
+            bool continuePrompting = true;
             int selection;
             int min = 1;
 
@@ -38,7 +38,7 @@ namespace NimTheGame
                 string userInput = Console.ReadLine();
 
                 //if the user input isn't a number, is higher than the amount of options, or is smaller than the amount of options
-                if ((!int.TryParse(userInput, out selection)) || selection > options.Count() + 1 || selection < min)
+                if ((!int.TryParse(userInput, out selection)) || selection > options.Count() || selection < min)
                 {
                     //tell them and prompt them again
                     Console.WriteLine("\nPlease enter in a number that is available on the list above\n");

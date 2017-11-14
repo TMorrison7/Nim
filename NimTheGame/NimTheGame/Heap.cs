@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NimTheGame
+namespace NimTheGame 
 {
     public class Heap
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        private int matches;
-        private bool[] values;
+        private int matches = 0;
+        private bool[] values = new bool[0];
         /// <summary>
         /// Generates a heap
         /// </summary>
@@ -20,23 +17,19 @@ namespace NimTheGame
         /// <param name="matches">The amount of matches in the heap</param>
         public Heap(int size, int matches)
         {
+            this.matches = matches;
+            values = new bool[size];
             if (matches > size)
             {
                 Console.WriteLine("The amount of matches is greater than the size");
             }
             else
-            { 
-                for (int x = 0; x < size; x++)
+            {
+                int count = 0;
+                for(int i = 0; i < size; i++)
                 {
-                    if (matches != 0)
-                    {
-                        values[x] = false;
-                        matches--;
-                    }
-                    else
-                    {
-                        values[x] = true;
-                    }
+                    if(count < matches) { values[i] = true; count++; }
+                    else { values[i] = false; }
                 }
             }
         }
@@ -63,11 +56,14 @@ namespace NimTheGame
         /// <param name="num">The number of matches within the heap</param>
         public void removeMatches(int num)
         {
-            for (int x = 0; x < num; x++)
+            int count = 0;
+            for (int x = 0; x < values.Length; x++)
             {
+                if(count == num) { break; }
                 if (values[x] == true)
                 {
                     values[x] = false;
+                    count++;
                 }
             }
         }
