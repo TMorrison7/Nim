@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NimTheGame", "NimTheGame\NimTheGame.csproj", "{99DAFDC9-AE9F-4D37-ADB1-03C6AE0B5C60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NimTester", "NimTester\NimTester.csproj", "{362E1E4C-7093-40CB-8A99-4D253C03DA0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{99DAFDC9-AE9F-4D37-ADB1-03C6AE0B5C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99DAFDC9-AE9F-4D37-ADB1-03C6AE0B5C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99DAFDC9-AE9F-4D37-ADB1-03C6AE0B5C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362E1E4C-7093-40CB-8A99-4D253C03DA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362E1E4C-7093-40CB-8A99-4D253C03DA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362E1E4C-7093-40CB-8A99-4D253C03DA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362E1E4C-7093-40CB-8A99-4D253C03DA0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
